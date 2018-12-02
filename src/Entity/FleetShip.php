@@ -29,7 +29,7 @@ class FleetShip
     private $name;
 
     /**
-     * @var \Fleet
+     * @var Fleet
      *
      * @ORM\ManyToOne(targetEntity="Fleet")
      * @ORM\JoinColumns({
@@ -39,7 +39,7 @@ class FleetShip
     private $fleet;
 
     /**
-     * @var \Ship
+     * @var Ship
      *
      * @ORM\ManyToOne(targetEntity="Ship")
      * @ORM\JoinColumns({
@@ -87,7 +87,7 @@ class FleetShip
     /**
      * Get the value of fleet
      *
-     * @return  \Fleet
+     * @return  Fleet
      */ 
     public function getFleet()
     {
@@ -97,11 +97,11 @@ class FleetShip
     /**
      * Set the value of fleet
      *
-     * @param  \Fleet  $fleet
+     * @param  Fleet  $fleet
      *
      * @return  self
      */ 
-    public function setFleet(\Fleet $fleet)
+    public function setFleet(Fleet $fleet)
     {
         $this->fleet = $fleet;
 
@@ -111,7 +111,7 @@ class FleetShip
     /**
      * Get the value of ship
      *
-     * @return  \Ship
+     * @return  Ship
      */ 
     public function getShip()
     {
@@ -121,11 +121,11 @@ class FleetShip
     /**
      * Set the value of ship
      *
-     * @param  \Ship  $ship
+     * @param  Ship  $ship
      *
      * @return  self
      */ 
-    public function setShip(\Ship $ship)
+    public function setShip(Ship $ship)
     {
         $this->ship = $ship;
 

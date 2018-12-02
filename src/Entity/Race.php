@@ -22,9 +22,9 @@ class Race
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="name", type="integer", nullable=false)
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
@@ -43,7 +43,7 @@ class Race
     /**
      * Get the value of name
      *
-     * @return  int
+     * @return  string
      */ 
     public function getName()
     {
@@ -53,11 +53,11 @@ class Race
     /**
      * Set the value of name
      *
-     * @param  int  $name
+     * @param  string  $name
      *
      * @return  self
      */ 
-    public function setName(int $name)
+    public function setName(string $name)
     {
         $this->name = $name;
 

@@ -125,4 +125,12 @@ class Player
 
         return $this;
     }
+
+    /**
+     * @return String
+     */
+    public function __toString()
+    {
+        return $this->pseudo;
+    }
 }

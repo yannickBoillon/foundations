@@ -1,0 +1,9 @@
+easy_admin:
+    entities:
+        - App\Entity\Fleet
+        - App\Entity\FleetShip
+        - App\Entity\Player
+        - App\Entity\Race
+        - App\Entity\Ship
+        - App\Entity\ShipCategory
+

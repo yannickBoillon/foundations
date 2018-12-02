@@ -29,7 +29,7 @@ class Fleet
     private $name;
 
     /**
-     * @var \Player
+     * @var Player
      *
      * @ORM\ManyToOne(targetEntity="Player")
      * @ORM\JoinColumns({
@@ -77,7 +77,7 @@ class Fleet
     /**
      * Get the value of player
      *
-     * @return  \Player
+     * @return  Player
      */ 
     public function getPlayer()
     {
@@ -87,11 +87,11 @@ class Fleet
     /**
      * Set the value of player
      *
-     * @param  \Player  $player
+     * @param  Player  $player
      *
      * @return  self
      */ 
-    public function setPlayer(\Player $player)
+    public function setPlayer(Player $player)
     {
         $this->player = $player;
 

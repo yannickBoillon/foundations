@@ -29,7 +29,7 @@ class Ship
     private $name;
 
     /**
-     * @var \ShipCategory
+     * @var ShipCategory
      *
      * @ORM\ManyToOne(targetEntity="ShipCategory")
      * @ORM\JoinColumns({
@@ -39,7 +39,7 @@ class Ship
     private $category;
 
     /**
-     * @var \Race
+     * @var Race
      *
      * @ORM\ManyToOne(targetEntity="Race")
      * @ORM\JoinColumns({
@@ -87,7 +87,7 @@ class Ship
     /**
      * Get the value of category
      *
-     * @return  \ShipCategory
+     * @return  ShipCategory
      */ 
     public function getCategory()
     {
@@ -97,11 +97,11 @@ class Ship
     /**
      * Set the value of category
      *
-     * @param  \ShipCategory  $category
+     * @param  ShipCategory  $category
      *
      * @return  self
      */ 
-    public function setCategory(\ShipCategory $category)
+    public function setCategory(ShipCategory $category)
     {
         $this->category = $category;
 
@@ -111,7 +111,7 @@ class Ship
     /**
      * Get the value of race
      *
-     * @return  \Race
+     * @return  Race
      */ 
     public function getRace()
     {
@@ -121,11 +121,11 @@ class Ship
     /**
      * Set the value of race
      *
-     * @param  \Race  $race
+     * @param  Race  $race
      *
      * @return  self
      */ 
-    public function setRace(\Race $race)
+    public function setRace(Race $race)
     {
         $this->race = $race;
 
