@@ -1,9 +1,20 @@
 easy_admin:
+    site_name: 'Foundations Fleets'
     entities:
-        - App\Entity\Fleet
-        - App\Entity\FleetShip
-        - App\Entity\Player
-        - App\Entity\Race
-        - App\Entity\Ship
-        - App\Entity\ShipCategory
-
+        Fleet:
+            class: App\Entity\Fleet
+        FleetShip:
+            class: App\Entity\FleetShip
+        Player:
+            class: App\Entity\Player
+            form:
+                fields:
+                    - pseudo
+                    - email
+        Race:
+            class: App\Entity\Race
+        Ship:
+            class: App\Entity\Ship
+        ShipCategory:
+            class: App\Entity\ShipCategory
+    

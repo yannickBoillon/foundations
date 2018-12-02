@@ -94,4 +94,12 @@ class ShipCategory
 
         return $this;
     }
+
+    /**
+     * @return String
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

@@ -131,4 +131,12 @@ class Ship
 
         return $this;
     }
+
+    /**
+     * @return String
+     */
+    public function __toString()
+    {
+        return sprintf('%s (%s %s)', $this->name, $this->race, $this->category);
+    }
 }

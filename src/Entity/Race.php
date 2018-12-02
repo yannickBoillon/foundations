@@ -63,4 +63,12 @@ class Race
 
         return $this;
     }
+
+    /**
+     * @return String
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
