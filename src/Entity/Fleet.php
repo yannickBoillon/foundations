@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Fleet
  *
  * @ORM\Table(name="fleet", indexes={@ORM\Index(name="player_id", columns={"player_id"})})
  * @ORM\Entity
+ * @ApiResource
  */
 class Fleet
 {
@@ -37,8 +39,6 @@ class Fleet
      * })
      */
     private $player;
-
-
 
     /**
      * Get the value of id

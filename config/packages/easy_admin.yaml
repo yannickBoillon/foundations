@@ -17,4 +17,8 @@ easy_admin:
             class: App\Entity\Ship
         ShipCategory:
             class: App\Entity\ShipCategory
-    
+    list:
+        actions:
+            - {name: show, icon: 'eye', label: false}
+            - {name: edit, icon: 'pencil', label: false}
+            - {name: delete, icon: 'trash', label: false}

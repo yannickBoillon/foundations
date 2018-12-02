@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * ShipCategory
  *
  * @ORM\Table(name="ship_category")
  * @ORM\Entity
+ * @ApiResource
  */
 class ShipCategory
 {

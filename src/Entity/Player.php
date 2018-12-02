@@ -5,12 +5,16 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Player
  *
  * @ORM\Table(name="player")
  * @ORM\Entity
+ * @ApiResource
  */
 class Player
 {
@@ -49,7 +53,17 @@ class Player
      */
     private $createdAt;
 
+    /**
+     * @var Collection
+     * 
+     * @ORM\OneToMany(targetEntity="App\Entity\Fleet", mappedBy="player")
+     */
+    private $fleets;
 
+    public function __construct()
+    {
+        $this->fleets = new ArrayCollection();
+    }
 
     /**
      * Get the value of id
@@ -139,5 +153,31 @@ class Player
     public function __toString()
     {
         return $this->pseudo;
+    }
+
+    
+
+    /**
+     * Get the value of fleets
+     *
+     * @return  Collection
+     */ 
+    public function getFleets()
+    {
+        return $this->fleets;
+    }
+
+    /**
+     * Set the value of fleets
+     *
+     * @param  Collection  $fleets
+     *
+     * @return  self
+     */ 
+    public function setFleets(Collection $fleets)
+    {
+        $this->fleets = $fleets;
+
+        return $this;
     }
 }
